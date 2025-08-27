@@ -12,7 +12,7 @@
 ---
 
 ## 👥 참여자
-### 🧑‍💻 ``김시완`` (킹시보리) [KingSibori](https://github.com/KingSibori)
+### 🧑‍💻 ``KSW`` (킹시보리) [KingSibori](https://github.com/KingSibori)
 - 🧑‍💻 노예1 [NullBins](https://github.com/NullBins)
 
 (*GitHub Profile*)
