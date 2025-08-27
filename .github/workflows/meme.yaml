@@ -1,14 +1,32 @@
-name: Random Meme
+name: Update README with Random Meme
 
 on:
-  push:
-    branches: [ main ]
+  schedule:
+    - cron: "*/3 * * * *"   # 👉 3분마다 실행
+  workflow_dispatch:
 
 jobs:
   meme:
     runs-on: ubuntu-latest
     steps:
-      - name: Show Random Meme
+      - uses: actions/checkout@v3
+
+      - name: Pick random meme
         run: |
-          MEMES=("( ͡° ͜ʖ ͡°)" "(╯°□°）╯︵ ┻━┻" "¯\_(ツ)_/¯" "(☞ﾟヮﾟ)☞")
-          echo "Random Meme: ${MEMES[$RANDOM % ${#MEMES[@]}]}"
+          mkdir -p memes
+          # Unsplash에서 "funny meme" 랜덤 이미지 가져오기
+          curl -s "https://source.unsplash.com/random/600x400/?funny,meme" -o memes/meme.jpg
+          echo "![Random Meme](./memes/meme.jpg)" > meme.md
+
+      - name: Insert into README
+        run: |
+          cp README.md README.bak
+          awk '/<!-- MEME -->/{system("cat meme.md");next}1' README.bak > README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md memes/meme.jpg
+          git commit -m "chore: update random meme 😂"
+          git push
