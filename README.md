@@ -44,5 +44,8 @@
 이 프로젝트는 MIT 라이선스로 배포됩니다.  
 누구나 자유롭게 사용, 수정, 공유할 수 있습니다. 💡
 
+## 🖍 기획안
+![Image](https://github.com/KingSibori/Something/blob/main/%EA%B8%B0%ED%9A%8D%EC%9D%B8%EC%A7%80%EB%AD%94%EC%A7%80%20%EB%AC%B4%EC%96%B8%EA%B0%80.png)
+
 ## 😂 오늘의 랜덤 밈
 ![Random Meme](./memes/meme.jpg)
