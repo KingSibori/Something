@@ -1,0 +1,14 @@
+name: Random Meme
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  meme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Random Meme
+        run: |
+          MEMES=("( ͡° ͜ʖ ͡°)" "(╯°□°）╯︵ ┻━┻" "¯\_(ツ)_/¯" "(☞ﾟヮﾟ)☞")
+          echo "Random Meme: ${MEMES[$RANDOM % ${#MEMES[@]}]}"
