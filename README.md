@@ -13,7 +13,6 @@
 
 ## 👥 참여자
 ### 🧑‍💻 ``김 시 완`` (킹시보리) [KingSibori](https://github.com/KingSibori)
-- 🧑‍💻 노예1 [NullBins](https://github.com/NullBins)
 
 (*GitHub Profile*)
 
